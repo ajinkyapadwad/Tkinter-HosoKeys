@@ -10,6 +10,7 @@ import tkinter
 kb = tkinter.Tk()
 
 buttons = [
+'~','`','!','@','#','$','%','^','&','*','(',')','-','_','L',
 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p','\\','7','8','9','BACK',
 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l','[',']','4','5','6'
 ,'SHIFT',
@@ -18,10 +19,12 @@ buttons = [
 
 def select(value):
 	if value == "BACK":
-		entry2 = entry.get()
-		pos = entry2.find(" ")
-		pos2=entry2[pos:]
-		entry.delete(pos2, tkinter.END)
+		# allText = entry.get()[:-1]
+		# entry.delete(0, tkinter,END)
+		# entry.insert(0,allText)
+
+		entry.delete(len(entry.get())-1,tkinter.END)
+		
 	elif value == "SPACE":
 		entry.insert(tkinter.END, ' ')
 	elif value == " Tab ":
@@ -56,9 +59,13 @@ def HosoPop():
 		if varColumn > 14 and varRow == 2:
 			varColumn = 0
 			varRow+=1
-		if varColumn > 14 and varRow ==3:
+		if varColumn > 14 and varRow == 3:
 			varColumn = 0
 			varRow+=1
+		if varColumn > 14 and varRow == 4:
+			varColumn = 0
+			varRow+=1
+
 
 def main():
 
