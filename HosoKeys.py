@@ -1,8 +1,14 @@
+"""
+Simple on-screen keyboard using tkinter
+Author : Ajinkya Padwad
+Version 1.0
+"""
+
 from tkinter import *
 import tkinter
 
 kb = tkinter.Tk()
-kb.title("HosoKey")
+kb.title("HosoKeys")
 kb.resizable(0,0)
 
 def select(value):
